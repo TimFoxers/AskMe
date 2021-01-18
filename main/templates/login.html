@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+                <div class="row">
+                    <p class="navbar-brand, title">Log In</p>
+                </div>
+                <div class="row">
+                    <div class="alert alert-danger" role="alert">
+                      Sorry, wrong password!
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand">Login</p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TitleForm">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand">Password</p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TitleForm">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand"></p>
+                    </div>
+                    <div class="col-7">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit">Login</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <a href="#" class = "create-account-href">Create new account</a>
+                </div>
+{% endblock %}

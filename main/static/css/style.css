@@ -20,6 +20,20 @@ main > .container {
 	margin: 45px 0px;
 }
 
+.TextForm{
+    height: 300px;
+}
+
+.AnswerForm{
+    width: 75%;
+    height: 50px;
+    padding-bottom: 15px;
+}
+
+.TagsAsk {
+    padding-top: 15px;
+}
+
 .list {
 	width: 100%;
 	padding-left: 20px;
@@ -91,6 +105,11 @@ main > .container {
 	max-width: 100px;
 }
 
+.avatar-settings {
+	max-width: 100px;
+	padding-bottom: 10px;
+}
+
 .likes {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -103,11 +122,25 @@ main > .container {
     padding-left: 30px;
 }
 
+.question-bottom {
+    padding-left: 150px;
+    padding-bottom: 20px;
+}
+
 .answer-bottom {
     padding-left: 200px;
     padding-bottom: 20px;
 }
 
+.check-bottom {
+    padding-left: 170px;
+}
+
 .search-field {
     border-radius: 10%;
+}
+
+.create-account-href {
+    padding-top: 30px;
+    padding-left: 160px;
 }

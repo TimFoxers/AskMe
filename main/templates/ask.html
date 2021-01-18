@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% block content %}
+                <div class="row">
+                    <p class="navbar-brand, title">New Question</p>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand">Title</p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TitleForm">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand">Text</p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TextForm">
+                    </div>
+                </div>
+                <div class="row TagsAsk">
+                    <div class="col-2">
+                        <p class="navbar-brand">Tags</p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TagsForm">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand"></p>
+                    </div>
+                    <div class="col-7">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit">ASK!</button>
+                    </div>
+                </div>
+{% endblock %}

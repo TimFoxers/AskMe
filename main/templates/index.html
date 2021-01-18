@@ -1,0 +1,8 @@
+{% extends 'base.html' %}
+{% block content %}
+                <a class="navbar-brand, title">New Questions</a>
+                <a class="navbar-brand" href="#">Hot Questions</a>
+                {% for question in questions %}
+                {% include 'one_question.html' %}
+                {% endfor %}
+{% endblock %}

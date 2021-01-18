@@ -9,53 +9,28 @@
     <body>
     <script type="text/javascript" src="../static/js/bootstrap.js"></script>
     <div class="row navbar">
-        <div class="col-3">
-          <a class="navbar-brand, title" href="#">AskTechnoPark</a>
-        </div>
-        <div class="col-6">
-          <form class="search">
-            <input class="form-control mr-sm-2 search-field" type="text" placeholder="Search" aria-label="Search">
-            <button class="btn btn-success my-2 my-sm-0" type="submit">ASK!</button>
-          </form>
-        </div>
-        <div class="col-3 info">
-          <div class="row">
-            <div class="col-3">
-              <img class="avatar" src="../static/img/avatar.jpg" />
-            </div>
-            <div class="col-9">
-              <div class="row">
-                <div class="col-6">
-                  Dr. Pepper
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-3"><a href="#">Settings</a></div>
-                <div class="col-4"><a href="#">Log out</a></div>
-              </div>
-            </div>
-          </div>
-        </div>
+        {% include 'navbar.html' %}
     </div>
 
       <main role="main" class="flex-shrink-0">
         <div class="container">
           <div class="row">
-            <div class="col-9">
-
+            <div class="col-9 center">
+                {% block content %}
+                {% endblock content %}
             </div>
             <div class="col-3 side">
               <div class="row side-menu-title">
                 <div class="col-12"> Popular Tags
                   <div>
-                    <span class="popular1">perl</span>
-                    <span class="popular3">python</span>
-                    <span class="popular1">TechnoPark</span>
-                    <span class="popular3">MySQL</span>
-                    <span class="popular2">django</span>
-                    <span class="popular1">Mail.ru</span>
+                      <span class="popular1">perl</span>
+                      <span class="popular3">python</span>
+                      <span class="popular1">TechnoPark</span>
+                      <span class="popular3">MySQL</span>
+                      <span class="popular2">django</span>
+                      <span class="popular1">Mail.ru</span>
                       <span class="popular1">Voloshin</span>
-                    <span class="popular4">FireFox</span>
+                      <span class="popular4">FireFox</span>
                   </div>
                 </div>
               </div>
@@ -71,6 +46,20 @@
               </div>
             </div>
           </div>
+
+            <nav aria-label="Page navigation example">
+            <ul class="pagination">
+              <li class="page-item"><a class="page-link" href="#">1</a></li>
+              <li class="page-item"><a class="page-link" href="#">2</a></li>
+              <li class="page-item"><a class="page-link" href="#">3</a></li>
+              <li class="page-item">
+                <a class="page-link" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+
         </div>
 
       </main>

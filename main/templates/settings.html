@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+{% block content %}
+                <div class="row">
+                    <p class="navbar-brand, title">Settings: Dr.Pepper</p>
+                </div>
+                <div class="row">
+                    <div class="alert alert-danger" role="alert">
+                      Sorry, something is wrong!
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand">Login</p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TitleForm" value = "DrPepper">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand">Email</p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TitleForm" value = "DrPepper@gmail.com">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand">NickName</p>
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TitleForm" value = "Dr. Pepper">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand">Avatar</p>
+                    </div>
+                    <div class="col-2 avatar-and-likes">
+                            <img class="avatar-settings" src="../static/img/avatar.jpg" />
+                        </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                    </div>
+                    <div class="col-7">
+                        <input type="text" class="TitleForm">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit">Upload</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <p class="navbar-brand"></p>
+                    </div>
+                    <div class="col-7">
+                        <button class="btn btn-success my-2 my-sm-0" type="submit">Save</button>
+                    </div>
+                </div>
+{% endblock %}
