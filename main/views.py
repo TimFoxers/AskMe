@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from main.models import Article
 # Create your views here.
 
 questions = [
@@ -10,6 +11,7 @@ questions = [
 ]
 
 def index(request):
+    questions = Article.objects.all()
     return render(request, 'index.html', {'questions': questions})
 
 def settings(request):
