@@ -2,14 +2,6 @@ from django.shortcuts import render
 from main.models import Article
 # Create your views here.
 
-questions = [
-    {
-        'id': idx,
-        'title': f'title{idx}',
-        'text': 'text text',
-    } for idx in range(5)
-]
-
 def index(request):
     questions = Article.objects.all()
     return render(request, 'index.html', {'questions': questions})
