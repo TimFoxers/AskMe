@@ -10,7 +10,7 @@ def paginate(objects_list, request, per_page=10):
 
 def index(request):
     questions = Article.objects.all()
-    page = paginate(questions, request, 2)
+    page = paginate(questions, request, 5)
     return render(request, 'index.html', {
         'page': page,
         'page_end_diff': page.paginator.num_pages - page.number,
@@ -23,8 +23,12 @@ def settings(request):
 def login(request):
     return render(request, 'login.html')
 
-def question(request):
-    return render(request, 'question.html')
+def question(request, question_id):
+    question = Article.objects.get(id=question_id)
+    answers = question.answers.all()
+    return render(request, 'question.html', {'question': question,
+                                             'answers': answers
+                                             })
 
 def ask(request):
     return render(request, 'ask.html')

@@ -1,12 +1,12 @@
 {% extends 'base.html' %}
 {% block content %}
-                <div class="question">
+                <div class="question-preview">
                     <div class="row">
                         <div class="col-2 avatar-and-likes">
-                            <img class="avatar" src="../static/img/avatar.jpg" />
+                            <img class="avatar" src="{{ question.author.avatar.url }}" />
                         </div>
                         <div class="col-6">
-                            <p class = "navbar-brand, title">How to build a moon park?</p>
+                            <h3 class = "navbar-brand, title">{{question.title}}</h3>
                         </div>
                     </div>
                     <div class="row">
@@ -18,11 +18,14 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <p class = "text">Guys, i have trouble with a moon park. Can't find th black-jack.</p>
+                            <p class = "text">{{question.text}}</p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-9 question-bottom">
+                        <div class="col-2 answer-bottom">
+                            <a href="#" class = "text">{{question.author.name}}</a>
+                        </div>
+                        <div class="col-7 answer-bottom">
                             <p class = "text">Tags: </p>
                             <a href="#" class = "text">Black-jack</a>
                             <a href="#" class = "text">Bender</a>
@@ -31,45 +34,13 @@
                 </div>
 
                 <hr class = "separator">
-                <div class = "col-12">
-                <div class="question-preview">
-                    <div class="row">
-                        <div class="col-2 avatar-and-likes">
-                            <img class="avatar" src="../static/img/avatar.jpg" />
-                        </div>
-                        <div class="col-6">
-                            <p class = "navbar-brand, title">Just build a moon park?</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="col-2 avatar-and-likes">
-                            <div class="list-group like-button">
-                              <a href="#" class="list-group-item list-group-item-action text-center likes">▲</a>
-                              <div class="list-group-item text-center text-truncate likes">10</div>
-                              <a href="#" class="list-group-item list-group-item-action text-center likes">▼</a>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <p class = "text">Noob...</p>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="form-check check-bottom">
-                                <input class="form-check-input" type="checkbox" value="" required>
-                                <p class = "text"> Correct!</p>
-                        </div>
-                    </div>
-                </div>
-                </div>
 
+                {% for answer in answers %}
                 <div class = "col-12">
                 <div class="question-preview">
                     <div class="row">
                         <div class="col-2 avatar-and-likes">
-                            <img class="avatar" src="../static/img/avatar.jpg" />
-                        </div>
-                        <div class="col-6">
-                            <p class = "navbar-brand, title">You mean earth park?</p>
+                            <img class="avatar" src="{{ answer.author.avatar.url }}" />
                         </div>
                     </div>
                     <div class="row">
@@ -81,10 +52,13 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <p class = "text">HaHa</p>
+                            <p class = "text">{{answer.text}}</p>
                         </div>
                     </div>
                     <div class="row">
+                        <div class="col-2 answer-bottom">
+                            <a href="#" class = "text">{{answer.author.name}}</a>
+                        </div>
                         <div class="form-check check-bottom">
                                 <input class="form-check-input" type="checkbox" value="" required>
                                 <p class = "text"> Correct!</p>
@@ -92,4 +66,5 @@
                     </div>
                 </div>
                 </div>
+                {% endfor %}
 {% endblock %}

@@ -1,10 +1,10 @@
                 <div class="question-preview">
                     <div class="row">
                         <div class="col-2 avatar-and-likes">
-                            <img class="avatar" src="../static/img/avatar.jpg" />
+                            <img class="avatar" src="{{ question.author.avatar.url }}" />
                         </div>
                         <div class="col-6">
-                            <a href = "/question" class = "navbar-brand, title">How to build a moon park?</a>
+                            <a href = "{% url 'question' question.id %}" class = "navbar-brand, title">{{question.title}}</a>
                         </div>
                     </div>
                     <div class="row">
@@ -16,12 +16,12 @@
                             </div>
                         </div>
                         <div class="col-6">
-                            <p class = "text">Guys, i have trouble with a moon park. Can't find th black-jack.</p>
+                            <p class = "text">{{question.text}}</p>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-2 answer-bottom">
-                            <a href="#" class = "text">Answers</a>
+                            <a href="#" class = "text">{{question.author.name}}</a>
                         </div>
                         <div class="col-7 answer-bottom">
                             <p class = "text">Tags: </p>
