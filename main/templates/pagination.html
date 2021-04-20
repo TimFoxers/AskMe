@@ -1,0 +1,25 @@
+<nav aria-label="Page navigation" class = "pagination">
+                  <ul class="pagination">
+                    {% if page.has_previous %}
+                      <li class="page-item"><a class="page-link" href="?page=1" role="button">1</a></li>
+                      {% if page.previous_page_number == 2 %}
+                        <li class="page-item"><a class="page-link"  href="?page=2" role="button">2</a></li>
+                      {% elif page.previous_page_number > 2 %}
+                        <li class="page-item"><a class="page-link" href="?page={{ page.previous_page_number }}" role="button">&lt</a></li>
+                      {% endif %}
+                    {% endif %}
+
+                    <li class="page-item"><a class="page-link" href="?page={{ page.number }}" role="button">{{ page.number }}</a></li>
+
+                    {% if page.has_next %}
+                      {% if page_end_diff == 2 %}
+                        <li class="page-item"><a class="page-link" href="?page={{ page.next_page_number }}"
+                          role="button">{{ page.next_page_number }}</a></li>
+                      {% elif page_end_diff > 2 %}
+                        <li class="page-item"><a class="page-link" href="?page={{ page.next_page_number }}" role="button">&gt</a></li>
+                      {% endif %}
+                      <li class="page-item"><a class="page-link" href="?page={{ page.paginator.num_pages }}"
+                        role="button">{{ page.paginator.num_pages }}</a></li>
+                    {% endif %}
+                  </ul>
+</nav>

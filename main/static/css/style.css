@@ -102,6 +102,7 @@ main > .container {
 
 .avatar {
     padding-top: 10px;
+    padding-bottom: 10px;
 	max-width: 100px;
 }
 
@@ -128,12 +129,11 @@ main > .container {
 }
 
 .answer-bottom {
-    padding-left: 200px;
-    padding-bottom: 20px;
+    padding-left: 160px;
 }
 
 .check-bottom {
-    padding-left: 170px;
+    padding-left: 55px;
 }
 
 .search-field {
@@ -143,4 +143,8 @@ main > .container {
 .create-account-href {
     padding-top: 30px;
     padding-left: 160px;
+}
+
+.pagination{
+    padding-top: 10px;
 }
